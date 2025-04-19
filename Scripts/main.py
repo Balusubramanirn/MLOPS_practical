@@ -5,8 +5,8 @@ from ml_functions import training_pipeline, prediction_pipeline, evaluation_matr
 from helper_functions import log_info, log_error
 
 # Define paths
-DATA_PATH = "D:/MLOPS-2025-DSC/mlops2025-DSC/Data/raw/loan_risk_data.csv"
-ARTIFACTS_PATH = "D:/MLOPS-2025-DSC/mlops2025-DSC/Artifacts"
+DATA_PATH = "C:/Users/Admin/Music/1BM22AI025_MLOPS/MLOPS_Practical/MLOPS_practical/Data/raw/loan_risk_data.csv"
+ARTIFACTS_PATH = "C:/Users/Admin\Music/1BM22AI025_MLOPS/MLOPS_Practical/MLOPS_practical/Artifacts"
 os.makedirs(ARTIFACTS_PATH, exist_ok=True)
 PIPELINE_PATH = os.path.join(ARTIFACTS_PATH, "data_processing_pipeline.pkl")
 LABEL_ENCODER_PATH = os.path.join(ARTIFACTS_PATH, "label_encoder.pkl")
@@ -51,6 +51,7 @@ def main():
     log_info(f"Confusion Matrix:\n{conf_matrix}")
     log_info(f"Accuracy Score: {acc_score}")
     log_info(f"Classification Report:\n{class_report}")
+    print(class_report)
 
 if __name__ == "__main__":
     main()
